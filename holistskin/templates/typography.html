@@ -1,19 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
-
-<!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
-
 <html lang="en">
 <head>
 
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-  <title>Aviato | E-commerce template</title>
+  <title>typography</title>
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -23,22 +16,20 @@
   <meta name="author" content="Themefisher">
   <meta name="generator" content="Themefisher Constra HTML Template v1.0">
   
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
-  
+ 
   <!-- Themefisher Icon font -->
-  <link rel="stylesheet" href="plugins/themefisher-font/style.css">
+  <link rel="stylesheet" href="{% static "plugins/themefisher-font/style.css" %}">
   <!-- bootstrap.min css -->
-  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static "plugins/bootstrap/css/bootstrap.min.css" %}">
   
   <!-- Animate css -->
-  <link rel="stylesheet" href="plugins/animate/animate.css">
+  <link rel="stylesheet" href="{% static "plugins/animate/animate.css" %}">
   <!-- Slick Carousel -->
-  <link rel="stylesheet" href="plugins/slick/slick.css">
-  <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+  <link rel="stylesheet" href="{% static "plugins/slick/slick.css" %}">
+  <link rel="stylesheet" href="{% static "plugins/slick/slick-theme.css" %}">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{% static "css/style.css" %}">
 
 </head>
 
@@ -50,21 +41,21 @@
 			<div class="col-md-4 col-xs-12 col-sm-4">
 				<div class="contact-number">
 					<i class="tf-ion-ios-telephone"></i>
-					<span>0129- 12323-123123</span>
+					<span>+234 070-000-000</span>
 				</div>
 			</div>
 			<div class="col-md-4 col-xs-12 col-sm-4">
 				<!-- Site Logo -->
 				<div class="logo text-center">
-					<a href="index.html">
+					<a href="#!">
 						<!-- replace logo here -->
-						<svg width="135px" height="29px" viewBox="0 0 155 29" version="1.1" xmlns="http://www.w3.org/2000/svg"
+						<svg width="135px" height="29px" viewBox="0 0 450 29" version="1.1" xmlns="http://www.w3.org/2000/svg"
 							xmlns:xlink="http://www.w3.org/1999/xlink">
-							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="40"
+							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="60"
 								font-family="AustinBold, Austin" font-weight="bold">
 								<g id="Group" transform="translate(-108.000000, -297.000000)" fill="#000000">
 									<text id="AVIATO">
-										<tspan x="108.94" y="325">AVIATO</tspan>
+										<tspan x="108.94" y="325">HolistSkin</tspan>
 									</text>
 								</g>
 							</g>
@@ -82,7 +73,7 @@
 							<!-- Cart Item -->
 							<div class="media">
 								<a class="pull-left" href="#!">
-									<img class="media-object" src="images/shop/cart/cart-1.jpg" alt="image" />
+									<img class="media-object" src="{% static "images/shop/cart/cart-1.jpg" %}" alt="image" />
 								</a>
 								<div class="media-body">
 									<h4 class="media-heading"><a href="#!">Ladies Bag</a></h4>
@@ -97,7 +88,7 @@
 							<!-- Cart Item -->
 							<div class="media">
 								<a class="pull-left" href="#!">
-									<img class="media-object" src="images/shop/cart/cart-2.jpg" alt="image" />
+									<img class="media-object" src="{% static "images/shop/cart/cart-2.jpg" %}" alt="image" />
 								</a>
 								<div class="media-body">
 									<h4 class="media-heading"><a href="#!">Ladies Bag</a></h4>
@@ -172,7 +163,7 @@
 
 					<!-- Home -->
 					<li class="dropdown ">
-						<a href="index.html">Home</a>
+						<a href="/index">Home</a>
 					</li><!-- / Home -->
 
 
@@ -189,11 +180,11 @@
 									<ul>
 										<li class="dropdown-header">Pages</li>
 										<li role="separator" class="divider"></li>
-										<li><a href="shop.html">Shop</a></li>
-										<li><a href="checkout.html">Checkout</a></li>
-										<li><a href="cart.html">Cart</a></li>
-										<li><a href="pricing.html">Pricing</a></li>
-										<li><a href="confirmation.html">Confirmation</a></li>
+										<li><a href="/shop">Shop</a></li>
+										<li><a href="/checkout">Checkout</a></li>
+										<li><a href="/cart">Cart</a></li>
+										<li><a href="/pricing">Pricing</a></li>
+										<li><a href="/confirmation">Confirmation</a></li>
 
 									</ul>
 								</div>
@@ -203,8 +194,8 @@
 									<ul>
 										<li class="dropdown-header">Layout</li>
 										<li role="separator" class="divider"></li>
-										<li><a href="product-single.html">Product Details</a></li>
-										<li><a href="shop-sidebar.html">Shop With Sidebar</a></li>
+										<li><a href="/product_single">Product Details</a></li>
+										<li><a href="/shop_sidebar">Shop With Sidebar</a></li>
 
 									</ul>
 								</div>
@@ -227,11 +218,11 @@
 									<ul>
 										<li class="dropdown-header">Introduction</li>
 										<li role="separator" class="divider"></li>
-										<li><a href="contact.html">Contact Us</a></li>
-										<li><a href="about.html">About Us</a></li>
-										<li><a href="404.html">404 Page</a></li>
-										<li><a href="coming-soon.html">Coming Soon</a></li>
-										<li><a href="faq.html">FAQ</a></li>
+										<li><a href="/contact">Contact Us</a></li>
+										<li><a href="/about">About Us</a></li>
+										<li><a href="/error">404 Page</a></li>
+										<li><a href="/coming_soon">Coming Soon</a></li>
+										<li><a href="/faq">FAQ</a></li>
 									</ul>
 								</div>
 
@@ -240,10 +231,10 @@
 									<ul>
 										<li class="dropdown-header">Dashboard</li>
 										<li role="separator" class="divider"></li>
-										<li><a href="dashboard.html">User Interface</a></li>
-										<li><a href="order.html">Orders</a></li>
-										<li><a href="address.html">Address</a></li>
-										<li><a href="profile-details.html">Profile Details</a></li>
+										<li><a href="/dashboard">User Interface</a></li>
+										<li><a href="/order">Orders</a></li>
+										<li><a href="/address">Address</a></li>
+										<li><a href="/profile_details">Profile Details</a></li>
 									</ul>
 								</div>
 
@@ -252,16 +243,16 @@
 									<ul>
 										<li class="dropdown-header">Utility</li>
 										<li role="separator" class="divider"></li>
-										<li><a href="login.html">Login Page</a></li>
-										<li><a href="signin.html">Signin Page</a></li>
-										<li><a href="forget-password.html">Forget Password</a></li>
+										<li><a href="/login">Login Page</a></li>
+										<li><a href="/signin">Signin Page</a></li>
+										<li><a href="/forget_password">Forget Password</a></li>
 									</ul>
 								</div>
 
 								<!-- Mega Menu -->
 								<div class="col-sm-3 col-xs-12">
 									<a href="shop.html">
-										<img class="img-responsive" src="images/shop/header-img.jpg" alt="menu image" />
+										<img class="img-responsive" src="{% static "images/shop/header-img.jpg" %}" alt="menu image" />
 									</a>
 								</div>
 							</div><!-- / .row -->
@@ -276,11 +267,11 @@
 							role="button" aria-haspopup="true" aria-expanded="false">Blog <span
 								class="tf-ion-ios-arrow-down"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-							<li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-							<li><a href="blog-full-width.html">Blog Full Width</a></li>
-							<li><a href="blog-grid.html">Blog 2 Columns</a></li>
-							<li><a href="blog-single.html">Blog Single</a></li>
+							<li><a href="/blog_left_sidebar">Blog Left Sidebar</a></li>
+							<li><a href="/blog_right_sidebar">Blog Right Sidebar</a></li>
+							<li><a href="/blog_full_width">Blog Full Width</a></li>
+							<li><a href="/blog_grid">Blog 2 Columns</a></li>
+							<li><a href="/blog_single">Blog Single</a></li>
 						</ul>
 					</li><!-- / Blog -->
 
@@ -290,9 +281,9 @@
 							role="button" aria-haspopup="true" aria-expanded="false">Elements <span
 								class="tf-ion-ios-arrow-down"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="typography.html">Typography</a></li>
-							<li><a href="buttons.html">Buttons</a></li>
-							<li><a href="alerts.html">Alerts</a></li>
+							<li><a href="/typography">Typography</a></li>
+							<li><a href="/buttons">Buttons</a></li>
+							<li><a href="/alerts">Alerts</a></li>
 						</ul>
 					</li><!-- / Blog -->
 				</ul><!-- / .nav .navbar-nav -->

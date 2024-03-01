@@ -1,5 +1,6 @@
 from django.urls import path
 from  holistskin_app import views
+from . import views
 
 urlpatterns = [
     path('',views.index,name='index'),
@@ -18,7 +19,7 @@ urlpatterns = [
     path('checkout',views.checkout,name='checkout'),
     path('coming_soon',views.coming_soon,name='coming_soon'),
     path('confirmation',views.confirmation,name='confirmation'),
-    path('contact',views.contact,name='contact'),
+    path('contact/', views.contact, name='contact'),
     path('dashboard',views.dashboard,name='dashboard'),
     path('empty_cart',views.empty_cart,name='empty_cart'),
     path('faq',views.faq,name='faq'),
