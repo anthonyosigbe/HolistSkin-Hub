@@ -109,8 +109,8 @@
 								<span class="total-price">$1799.00</span>
 							</div>
 							<ul class="text-center cart-buttons">
-								<li><a href="cart.html" class="btn btn-small">View Cart</a></li>
-								<li><a href="checkout.html" class="btn btn-small btn-solid-border">Checkout</a></li>
+								<li><a href="/cart" class="btn btn-small">View Cart</a></li>
+								<li><a href="/checkout" class="btn btn-small btn-solid-border">Checkout</a></li>
 							</ul>
 						</div>
 
@@ -182,11 +182,11 @@
 									<ul>
 										<li class="dropdown-header">Pages</li>
 										<li role="separator" class="divider"></li>
-										<li><a href="shop.html">Shop</a></li>
-										<li><a href="checkout.html">Checkout</a></li>
-										<li><a href="cart.html">Cart</a></li>
-										<li><a href="pricing.html">Pricing</a></li>
-										<li><a href="confirmation.html">Confirmation</a></li>
+										<li><a href="/shop">Shop</a></li>
+										<li><a href="/checkout">Checkout</a></li>
+										<li><a href="/cart">Cart</a></li>
+										<li><a href="/pricing">Pricing</a></li>
+										<li><a href="/confirmation">Confirmation</a></li>
 
 									</ul>
 								</div>
@@ -196,8 +196,8 @@
 									<ul>
 										<li class="dropdown-header">Layout</li>
 										<li role="separator" class="divider"></li>
-										<li><a href="product-single.html">Product Details</a></li>
-										<li><a href="shop-sidebar.html">Shop With Sidebar</a></li>
+										<li><a href="/product_single">Product Details</a></li>
+										<li><a href="/shop_sidebar">Shop With Sidebar</a></li>
 
 									</ul>
 								</div>
@@ -222,7 +222,7 @@
 										<li role="separator" class="divider"></li>
 										<li><a href="/contact">Contact Us</a></li>
 										<li><a href="/about">About Us</a></li>
-										<li><a href="/404">404 Page</a></li>
+										<li><a href="/error">404 Page</a></li>
 										<li><a href="/coming_soon">Coming Soon</a></li>
 										<li><a href="/faq">FAQ</a></li>
 									</ul>
@@ -245,16 +245,16 @@
 									<ul>
 										<li class="dropdown-header">Utility</li>
 										<li role="separator" class="divider"></li>
-										<li><a href="/login">Login Page</a></li>
-										<li><a href="/signin">Signin Page</a></li>
-										<li><a href="/forget-password">Forget Password</a></li>
-										<li><a href="/logout-password">Logout</a></li>
+										<li><a href="/auth/login/">Login Page</a></li>
+										<li><a href="/auth/signin/">Signin Page</a></li>
+										<li><a href="/auth/forget_password/">Forget Password</a></li>
+										<li><a href="/auth/logout/">Logout</a></li>
 									</ul>
 								</div>
 
 								<!-- Mega Menu -->
 								<div class="col-sm-3 col-xs-12">
-									<a href="shop.html">
+									<a href="/shop">
 										<img class="img-responsive" src="{% static "images/shop/header-img.jpg" %}" alt="menu image" />
 									</a>
 								</div>
@@ -284,9 +284,9 @@
 							role="button" aria-haspopup="true" aria-expanded="false">Elements <span
 								class="tf-ion-ios-arrow-down"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="typography.html">Typography</a></li>
-							<li><a href="buttons.html">Buttons</a></li>
-							<li><a href="alerts.html">Alerts</a></li>
+							<li><a href="/typography">Typography</a></li>
+							<li><a href="/buttons">Buttons</a></li>
+							<li><a href="/alerts">Alerts</a></li>
 						</ul>
 					</li><!-- / Blog -->
 				</ul><!-- / .nav .navbar-nav -->
@@ -338,22 +338,6 @@ Start Call To Action
 	</div>   	<!-- End container -->
 </section>   <!-- End section -->
 
-<section class="section instagram-feed">
-	<div class="container">
-		<div class="row">
-			<div class="title">
-				<h2>View us on instagram</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-12">
-				<div class="instagram-slider" id="instafeed" data-accessToken="IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1NmpxZA3RTbnU1MXpDNVBHTzZAMOFlxcGlkVHBKdjhqSnUybERhNWdQSE5hVmtXT013MEhOQVJJRGJBRURn"></div>
-			</div>
-		</div>
-	</div>
-</section>
-
-
 <footer class="footer section text-center">
 	<div class="container">
 		<div class="row">
@@ -394,7 +378,7 @@ Start Call To Action
 						<a href="/contact">PRIVACY POLICY</a>
 					</li> {% endcomment %}
 				</ul>
-				<p class="copyright-text">Copyright &copy;2024, Designed &amp; Developed by <a href="#">Anthony & David</a></p>
+				<p class="copyright-text">Copyright &copy;2024, Designed &amp; Developed by <a href="#">Anthony &amp; David</a></p>
 			</div>
 		</div>
 	</div>

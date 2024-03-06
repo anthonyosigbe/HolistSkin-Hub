@@ -5,10 +5,10 @@ def signin(request):
   return render(request,'signin.html')
 
 def handleLogin(request):
-  return render(request,'handleLogin.html')
+  return render(request,'login.html')
 
 def handleLogout(request):
-  return render(request,'handleLogout.html')
+  return render(request,'logout.html')
 
 def handleForget_password(request):
-  return render(request,'handleForget_password.html')
+  return render(request,'forget_password.html')
