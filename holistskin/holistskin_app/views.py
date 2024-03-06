@@ -13,24 +13,6 @@ def about(request):
 def address(request):
   return render(request,'address.html')
 
-def alerts(request):
-  return render(request,'alerts.html')
-
-def blog_full_width(request):
-  return render(request,'blog_full_width.html')
-
-def error(request):
-  return render(request,'error.html')
-
-def blog_grid(request):
-  return render(request,'blog_grid.html')
-
-def blog_left_sidebar(request):
-  return render(request,'blog_left_sidebar.html')
-
-def blog_right_sidebar(request):
-  return render(request,'blog_right_sidebar.html')
-
 def blog_single(request):
   return render(request,'blog_single.html')
 
@@ -85,14 +67,8 @@ def purchase_confirmation(request):
 def shop_sidebar(request):
   return render(request,'shop_sidebar.html')
 
-def shop_sidebar(request):
-  return render(request,'shop_sidebar.html')
-
 def shop(request):
   return render(request,'shop.html')
 
 def signin(request):
   return render(request,'signin.html')
-
-def typography(request):
-  return render(request,'typography.html')
