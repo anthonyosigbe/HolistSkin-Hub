@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+# Creating views that dynamically render each HTML page directly from the database..
 def index(request):
   return render(request,'index.html')
 
