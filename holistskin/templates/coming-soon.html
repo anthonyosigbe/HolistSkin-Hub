@@ -6,7 +6,7 @@
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-  <title>Create New Account</title>
+  <title>New Products</title>
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -14,8 +14,8 @@
   <meta name="description" content="Construction Html5 Template">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="author" content="Themefisher">
-  <meta name="generator" content="Themefisher Constra HTML Template v1.0"> 
-  
+  <meta name="generator" content="Themefisher Constra HTML Template v1.0">
+   
   <!-- Themefisher Icon font -->
   <link rel="stylesheet" href="{% static "plugins/themefisher-font/style.css" %}">
   <!-- bootstrap.min css -->
@@ -34,48 +34,37 @@
 
 <body id="body">
 
-<section class="signin-page account">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <div class="block text-center">
-          <a class="logo" href="/index">
-            <img src="{% static '../static/images/backgrounds/logo1-removebg-preview.png' %}" alt="Holistic Hub Logo" width="130" height="130">
-          </a>
-        
-          <h2 class="text-center">Create Your Account</h2>
-        {% for message in messages  %}
+<section class="coming-soon bg-coming-soon text-center overly">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="block">
+					<div class="count-down">
+						<div class="syotimer">
+							<div class="your_selector_to_countdown" id="simple-timer"></div>
+						</div>
+					</div>
+					<h1>Hello, we're Holistskin and <br> we are almost ready for launch</h1>
+					<div class="social-media-icons mt-20">
+						<ul>
+							<li><a href=""><i class="tf-ion-social-facebook"></i></a></li>
+							<li><a href=""><i class="tf-ion-social-twitter"></i></a></li>
+							<li><a href=""><i class="tf-ion-social-linkedin"></i></a></li>
+							<li><a href=""><i class="tf-ion-social-octocat"></i></a></li>
+							<li><a href=""><i class="tf-ion-social-pinterest"></i></a></li>
+							<li><a href=""><i class="tf-ion-social-instagram"></i></a></li>
 
-          <div class="alert alert-{{messages.tags}} alert-dismissible show" role="alert">
-            <strong>{{message}}</strong> 
-            
-          </div> 
-          {% endfor %}          
-          
-          <form class="text-left clearfix" action="/auth/signin/" method="post">{% csrf_token %}
-            <div class="form-group">
-              <input type="text" class="form-control"  placeholder="Full Name" name="full_name" required />
-            </div>
-            
-            <div class="form-group">
-              <input type="text" class="form-control"  placeholder="Email" name="email" required />
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control"  placeholder="Password" name="pass1" required />
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control"  placeholder="Confirm Password" name="pass2" required />
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-main text-center">Sign In</button>
-            </div>
-          </form>
-          <p class="mt-20">Already hava an account ?<a href="/auth/login/"> Login</a></p>
-          <p><a href="/auth/forget_password/"> Forgot your password?</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
+						</ul>
+
+
+					</div>
+
+					<p class="copyright-text">Copyright &copy; 2020. Designed &amp; Developed by <a href="">Anthony &amp; David</a></p>
+
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
     <!-- 
