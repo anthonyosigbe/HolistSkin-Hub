@@ -44,7 +44,8 @@
             <img src="{% static '../static/images/backgrounds/logo1-removebg-preview.png' %}" alt="Holistic Hub Logo" width="130" height="130">
           </a>
           <h2 class="text-center">Create Your Account</h2>
-          <form class="text-left clearfix" action="/dashboard">
+          <form action="" method="post">{% csrf_token %}
+          
             <div class="form-group">
               <input type="text" class="form-control"  placeholder="First Name">
             </div>
@@ -61,7 +62,7 @@
               <input type="password" class="form-control"  placeholder="Password">
             </div>
             <div class="text-center">
-              <button type="submit" class="btn btn-main text-center">Sign In</button>
+              <button type="submit" class="btn btn-main text-center">Sign Up</button>
             </div>
           </form>
           <p class="mt-20">Already hava an account ?<a href="/login"> Login</a></p>

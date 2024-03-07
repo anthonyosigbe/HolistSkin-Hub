@@ -43,7 +43,7 @@
             <img src="{% static '../static/images/backgrounds/logo1-removebg-preview.png' %}" alt="Holistic Hub Logo" width="130" height="130">
           </a>
           <h2 class="text-center">Welcome Back</h2>
-          <form class="text-left clearfix" action="/index" >
+          <form action="" method="post">{% csrf_token %}
             <div class="form-group">
               <input type="email" class="form-control"  placeholder="Email">
             </div>
