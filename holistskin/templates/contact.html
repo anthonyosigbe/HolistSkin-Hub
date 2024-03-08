@@ -2,31 +2,46 @@
 {% load static %}
 {% block title %}Contact Us{% endblock title %}
 {% block body %}
+<div class="container" mt-4 p-2>
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<h3 class="w3-text-white bg-black-4 text-center text- p-3">CONTACT US</h3>
+			{% for message in messages  %}
+
+           <div class="alert alert-{{message.tags}} alert-dismissible show" role="alert">
+             <strong> {{message}} </strong> 
+             
+           </div> 
+           {% endfor %}  
+		</div>
+	</div>
+</div>
 <section class="page-wrapper">
 	<div class="contact-section">
 		<div class="container">
 			<div class="row">
 				<!-- Contact Form -->
 				<div class="contact-form col-md-6 " >
-					<form id="contact-form" method="post" action="" role="form">
+					<form id="contact-form" method="post" action="/contact" role="form">{% csrf_token %}
 					
 						<div class="form-group">
-							<input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
+							<input type="text" placeholder="Your Name" class="form-control" name="name" id="name" required>
 						</div>
 						
 						<div class="form-group">
-							<input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
+							<input type="text" placeholder="Your Email" value="{{user.email}}" class="form-control" name="email" id="email" required/>
 						</div>
 						
 						<div class="form-group">
-							<input type="number" placeholder="Your Phone Number" class="form-control" name="phonenumber" id="phonenumber">
+							<input type="number" placeholder="Phone N0." class="form-control" name="num" id="phonenumber">
 						</div>
 						<div class="form-group">
-							<input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
+							<input type="text" placeholder="Subject" class="form-control" name="subject" id="subject" required>
 						</div>
 						
 						<div class="form-group">
-							<textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>	
+							<textarea rows="6" placeholder="How can we Help you? " class="form-control" name="message" id="message" required></textarea>	
 						</div>
 						
 						<div id="mail-success" class="success">

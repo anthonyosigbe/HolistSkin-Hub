@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from django.contrib import messages
+from holistskin_app.models import Contact
 
 # Creating views that dynamically render each HTML page directly from the database..
 def index(request):
@@ -35,6 +37,18 @@ def confirmation(request):
   return render(request,'confirmation.html')
 
 def contact(request):
+  if request.method=="POST":
+    fname=request.POST.get('name')
+    femail=request.POST.get('email')
+    fphonenumber=request.POST.get('num')
+    fsubject=request.POST.get('subject')
+    fmessage=request.POST.get('message')
+    query=Contact(name=fname,email=femail,phonenumber=fphonenumber,subject=fsubject,message=fmessage)
+    query.save()
+    messages.success(request,"Thank you for reaching out. We'll be in touch shortly.")
+   
+    return redirect('/contact')
+
   return render(request,'contact.html')
 
 def dashboard(request):
