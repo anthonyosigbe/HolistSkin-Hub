@@ -6,7 +6,8 @@ from django.contrib import messages
 # Created views that links backend to front end for login authentications.
 def signin(request):
   if request.method=="POST":
-    get_full_name=request.POST.get('full_name')
+    get_first_name=request.POST.get('first_name')
+    get_last_name=request.POST.get('last_name')
     get_email=request.POST.get('email')
     get_password=request.POST.get('pass1')
     get_confirm_password=request.POST.get('pass2')
@@ -34,9 +35,23 @@ def signin(request):
   return render(request,'signin.html')
 
 def handleLogin(request):
+  if request.method=="POST":
+    get_email=request.POST.get('email')
+    get_password=request.POST.get('pass1')
+    myuser= authenticate(username=get_email,password=get_password)
+
+    if myuser is not None:
+      login(request,myuser)
+      messages.success(request,"Login Success")
+      return redirect('/index')
+    else:
+      messages.error(request,"Invalid Credentials")
+
   return render(request,'login.html')
 
 def handleLogout(request):
+  logout(request)
+  messages.success(request,'Logout Success')
   return render(request,'logout.html')
 
 def handleForget_password(request):

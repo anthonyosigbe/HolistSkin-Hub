@@ -39,10 +39,10 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="block text-center">
-          <a class="logo" href="/index">
+          <a class="logo" href="/auth/login/">
             <img src="{% static '../static/images/backgrounds/logo1-removebg-preview.png' %}" alt="Holistic Hub Logo" width="130" height="130">
           </a>
-           <h2 class="text-center">Welcome Back</h2>
+           <h2 class="text-center">Welcome</h2>
            {% for message in messages  %}
 
            <div class="alert alert-{{message.tags}} alert-dismissible show" role="alert">
@@ -51,7 +51,7 @@
            </div> 
            {% endfor %}  
           
-          <form action="/dashboard" method="post">{% csrf_token %}
+          <form action="/auth/login/" method="post">{% csrf_token %}
             <div class="form-group">
               <input type="email" class="form-control"  placeholder="Email" name="email" required>
             </div>
