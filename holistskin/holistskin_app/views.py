@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
-from holistskin_app.models import Contact
+from holistskin_app.models import Contact,Blogs
 
 # Creating views that dynamically render each HTML page directly from the database..
 def index(request):
@@ -15,8 +15,10 @@ def about(request):
 def address(request):
   return render(request,'address.html')
 
-def blog_single(request):
-  return render(request,'blog_single.html')
+def handleblog(request):
+  posts=Blogs.objects.all()
+  context={"posts":posts}
+  return render(request,'handleblog.html',context)
 
 def buttons(request):
   return render(request,'buttons.html')
