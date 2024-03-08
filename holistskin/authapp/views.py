@@ -55,4 +55,5 @@ def handleLogout(request):
   return render(request,'logout.html')
 
 def handleForget_password(request):
+  
   return render(request,'forget_password.html')
