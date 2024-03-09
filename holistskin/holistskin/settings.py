@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-import django_heroku
+# import django_heroku
 from pathlib import Path
 from django.contrib.messages import constants as messages
 
@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-@%fcaxpu13uuptv%#7wp=#3i)uku2j%t4s2v1%fn=9p6=byr52
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -138,4 +138,4 @@ MESSAGE_TAGS={
 }
 
 # Activate Django-Heroku
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
