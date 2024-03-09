@@ -113,6 +113,14 @@ def trainingdetails(request):
     fprojreport=fprojreport.upper()
     foffer=foffer.upper()
     
+# 
+    check1=Training.objects.filter(usn=fusn)
+    check2=Training.objects.filter(email=femail)
+    
+    if check1 or check2:
+      messages.warning(request,"Details Already Registered, Login or request for Password Reset")
+      return redirect('/index')
+    
     query=Training(fullname=fname,usn=fusn,email=femail,highest_qualification=fqualification,offers_status=foffer,start_date=fstartdate,end_date=fenddate,proj_report=fprojreport)
     query.save()
     messages.success(request,"Form is Submitted Successfully")
