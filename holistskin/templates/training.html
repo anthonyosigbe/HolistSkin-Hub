@@ -1,0 +1,108 @@
+{% extends "basic.html" %}
+{% load static %}
+{% block title %}Contact Us{% endblock title %}
+{% block body %}
+{% for message in messages  %}
+
+<div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+  <strong>{{message}}</strong> 
+  
+</div> 
+{% endfor %}  
+<body id="body">
+<section class="signin-page account">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="block text-center">
+          <a class="logo" href="/index">
+            <img src="{% static '../static/images/backgrounds/logo1-removebg-preview.png' %}" alt="Holistic Hub Logo" width="130" height="130">
+          </a>
+        
+          <h2 class="text-center">Fill in your correct details to Register</h2>      
+          <form class="text-left clearfix" action="/trainingdetails" method="post">{% csrf_token %}
+            <div class="form-group">
+							<i class="fas fa-html5">Name</i>
+              <input type="text" class="form-control"  placeholder="Full Name" name="name" required />
+            </div>
+            
+            <div class="form-group">
+							<i class="fas fa-html5">Email</i>
+              <input type="email" class="form-control"  placeholder="Email" name="email" value={{user.email}} required />
+            </div>
+
+						<div class="form-group">
+							<i class="fas fa-html5">USN</i>
+              <input type="text" class="form-control"  placeholder="U.S.N" name="usn" required />
+            </div>
+
+            <div class="form-group">
+							<i class="fas fa-html5">Qualification</i>
+							<input type="text" placeholder="Highest Qualification" class="form-control" name="hqualification" id="subject" required>
+						</div>
+
+						<div class="form-group">
+							<i class="fas fa-html5">Offer Letter</i>
+							<input type="text" placeholder="Did you Receive an Offer Letter? Yes/No" class="form-control" name="offer" id="subject" required>
+						</div>
+
+						<div class="form-group">
+							<i class="fas fa-html5">Start Date</i>
+              <input type="date" class="form-control"  placeholder="Start Date" name="startdate" required />
+            </div>
+
+						<div class="form-group">
+							<i class="fas fa-html5">End Date</i>
+              <input type="date" class="form-control"  placeholder="U.S.Start Date" name="enddate" required />
+            </div>
+
+						<div class="form-group">
+							<i class="fas fa-html5">Project Report</i>
+							<input type="text" placeholder="Did you want Project and Report? Yes/No" class="form-control" name="projreport" id="subject" required>
+						</div>
+
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-main text-center-block">Register</button>
+            </div>
+          </form>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock body %}
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+    
+    <!-- Main jQuery -->
+    <script src="{% static "plugins/jquery/dist/jquery.min.js" %}"></script>
+    <!-- Bootstrap 3.1 -->
+    <script src="{% static "plugins/bootstrap/js/bootstrap.min.js" %}"></script>
+    <!-- Bootstrap Touchpin -->
+    <script src="{% static "plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js" %}"></script>
+    <!-- Instagram Feed Js -->
+    <script src="{% static "plugins/instafeed/instafeed.min.js" %}"></script>
+    <!-- Video Lightbox Plugin -->
+    <script src="{% static "plugins/ekko-lightbox/dist/ekko-lightbox.min.js" %}"></script>
+    <!-- Count Down Js -->
+    <script src="{% static "plugins/syo-timer/build/jquery.syotimer.min.js" %}"></script>
+
+    <!-- slick Carousel -->
+    <script src="{% static "plugins/slick/slick.min.js" %}"></script>
+    <script src="{% static "plugins/slick/slick-animation.min.js" %}"></script>
+
+    <!-- Google Mapl -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+    <script type="text/javascript" src="{% static "plugins/google-map/gmap.js" %}"></script>
+
+    <!-- Main Js File -->
+    <script src="{% static "js/script.js" %}"></script>
+    
+
+
+  </body>
+  </html>

@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
-from holistskin_app.models import Contact,Blogs
+from holistskin_app.models import Contact,Blogs,Training
+
 
 # Creating views that dynamically render each HTML page directly from the database..
 def index(request):
@@ -88,3 +89,33 @@ def shop(request):
 
 def signin(request):
   return render(request,'signin.html')
+
+def trainingdetails(request):
+  
+  if not request.user.is_authenticated:
+    messages.warning(request,"please Login to Access this page")
+    return redirect("/auth/login/")
+  
+  if request.method=="POST":
+    fname=request.POST.get('name')
+    femail=request.POST.get('email')
+    fusn=request.POST.get('usn')
+    fqualification=request.POST.get('hqualification')
+    foffer=request.POST.get('offer')
+    fstartdate=request.POST.get('startdate')
+    fenddate=request.POST.get('enddate')
+    fprojreport=request.POST.get('projreport')
+    
+# Converting to upper case letters.    
+    fname=fname.upper()
+    fusn=fusn.upper()
+    fqualification=fqualification.upper()
+    fprojreport=fprojreport.upper()
+    foffer=foffer.upper()
+    
+    query=Training(fullname=fname,usn=fusn,email=femail,highest_qualification=fqualification,offers_status=foffer,start_date=fstartdate,end_date=fenddate,proj_report=fprojreport)
+    query.save()
+    messages.success(request,"Form is Submitted Successfully")
+    return redirect('/dashboard')
+    
+  return render(request,'training.html')

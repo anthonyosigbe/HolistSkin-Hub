@@ -25,4 +25,5 @@ urlpatterns = [
     path('shop_sidebar',views.shop_sidebar,name='shop_sidebar'),
     path('shop',views.shop,name='shop'),
     path('signin',views.signin,name='signin'),
+    path('trainingdetails',views.trainingdetails,name='trainingdetails'),
 ]

@@ -23,6 +23,20 @@ class Blogs(models.Model):
 
   def __str__(self):
     return self.title
+  
+class Training(models.Model):
+  fullname=models.CharField(max_length=60)
+  usn=models.CharField(max_length=60)
+  email=models.CharField(max_length=60)
+  highest_qualification=models.CharField(max_length=100)
+  offers_status=models.CharField(max_length=60)
+  start_date=models.CharField(max_length=60)
+  end_date=models.CharField(max_length=60)
+  proj_report=models.CharField(max_length=60)
+  timeStamp=models.DateTimeField(auto_now_add=True,blank=True,null=True)
+  
+  def __str__(self):
+    return self.usn
 
 
 
