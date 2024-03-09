@@ -2292,3 +2292,17 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   color: #555;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+/* background style for login page */
+.class {
+  background-image: url('https://img.freepik.com/free-photo/care-products-plants-arrangement_23-2149879994.jpg?w=740&t=st=1709985140~exp=1709985740~hmac=98f2ca6c5480e0e4ea19d0ceda1d652c986a949cd83c03f3cf2d80e1aa50eedf');
+    /* Replace 'hero-image.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
