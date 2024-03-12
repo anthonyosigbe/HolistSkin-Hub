@@ -39,7 +39,7 @@ def confirmation(request):
 def confirmation(request):
   return render(request,'confirmation.html')
 
-def contact(request):
+def Contact(request):
   if request.method=="POST":
     fname=request.POST.get('name')
     femail=request.POST.get('email')
