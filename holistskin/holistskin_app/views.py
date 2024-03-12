@@ -41,12 +41,12 @@ def confirmation(request):
 
 def Contact(request):
   if request.method=="POST":
-    fname=request.POST.get('name')
-    femail=request.POST.get('email')
-    fphonenumber=request.POST.get('num')
-    fsubject=request.POST.get('subject')
-    fmessage=request.POST.get('message')
-    query=Contact(name=fname,email=femail,phonenumber=fphonenumber,subject=fsubject,message=fmessage)
+    name=request.POST.get('name')
+    email=request.POST.get('email')
+    phonenumber=request.POST.get('num')
+    subject=request.POST.get('subject')
+    message=request.POST.get('message')
+    query=Contact(name=name,email=email,phonenumber=phonenumber,subject=subject,message=message)
     query.save()
     messages.success(request,"Thank you for reaching out. We'll be in touch shortly.")
    
