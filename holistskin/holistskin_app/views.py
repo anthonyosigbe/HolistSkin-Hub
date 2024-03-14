@@ -1,6 +1,11 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from holistskin_app.models import Contact,Blogs,Training
+# Imports for send emails
+from django.conf import settings
+from django.core.mail import send_mail
+from django.core import mail
+from django.core.mail.message import EmailMessage
 
 
 # Creating views that dynamically render each HTML page directly from the database..
@@ -48,6 +53,7 @@ def Contact_view(request):
     fmessage=request.POST.get('message')
     query=Contact(name=fname,email=femail,phonenumber=fphonenumber,subject=fsubject,message=fmessage)
     query.save()
+
     messages.success(request,"Thank you for contacting us we will get back to you shortly")
     
     return redirect('/contact')
