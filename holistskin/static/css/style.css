@@ -2156,10 +2156,10 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   margin-bottom: 40px;
 }
 .contact-form .form-control {
-  background-color: transparent;
-  border: 1px solid #dedede;
+  background-color: white;
+  border: 1px solid #255035;
   box-shadow: none;
-  height: 45px !important;
+  height: 40px !important;
   color: #0c0c0c;
   height: 38px;
   font-family: "Open Sans", sans-serif;
@@ -2176,7 +2176,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   padding: 15px 0;
   width: 100%;
   margin: 0;
-  background: #000;
+  background: #255035;
   color: #fff;
   border-radius: 0;
 }

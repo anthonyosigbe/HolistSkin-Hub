@@ -44,7 +44,7 @@ def confirmation(request):
 def confirmation(request):
   return render(request,'confirmation.html')
 
-def Contact(request):
+def Contact_view(request):
   if request.method=="POST":
     name=request.POST.get('name')
     email=request.POST.get('email')
