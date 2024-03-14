@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-# import django_heroku
+
 from pathlib import Path
 from django.contrib.messages import constants as messages
 
@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-@%fcaxpu13uuptv%#7wp=#3i)uku2j%t4s2v1%fn=9p6=byr52'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
 
 
 # Application definition
@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'holistskin.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'BZaicPoIWhmkjzFHypBhVdTjHplFmcnI',
+        'HOST': 'monorail.proxy.rlwy.net',
+        'PORT': '49185',
     }
 }
 
@@ -115,24 +119,15 @@ USE_I18N = True
 USE_TZ = True
 
 
-
-
-EMAIL_HOST='smtp.gmail.com'
-EMAIL_HOST_USER='thronehubtech@gmail.com'
-EMAIL_HOST_PASSWORD='svapmubcjrfkzhep'
-EMAIL_PORT='587'
-EMAIL_USE_TLS=True
-EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
 
-import os;
-STATICFILES_DIRS =[
-  os.path.join(BASE_DIR,'static')
-]
+# import os;
+# STATICFILES_DIRS =[
+#   os.path.join(BASE_DIR,'static')
+# ]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT= os.path.join(BASE_DIR,'media')
@@ -141,10 +136,9 @@ MEDIA_ROOT= os.path.join(BASE_DIR,'media')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 MESSAGE_TAGS={
   messages.ERROR:'danger'
 }
-
-# Activate Django-Heroku
-# django_heroku.settings(locals())
