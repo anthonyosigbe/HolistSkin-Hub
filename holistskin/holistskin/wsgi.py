@@ -10,8 +10,9 @@ https://docs.djangoproject.com/en/5.0/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
+from holistskin_app import *
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'holistskin.settings')
 
 application = get_wsgi_application()
-
+app=application

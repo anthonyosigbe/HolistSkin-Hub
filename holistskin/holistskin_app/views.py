@@ -99,7 +99,7 @@ def signin(request):
 def trainingdetails(request):
   
   if not request.user.is_authenticated:
-    messages.warning(request,"please Login to Access this page")
+    messages.warning(request,"please Login to Access the training page")
     return redirect("/auth/login/")
   
   if request.method=="POST":
