@@ -1,4 +1,4 @@
-
+/* CSS for the hero area */
 .hero-area {
   height: 650px;
   display: flex;
@@ -15,6 +15,7 @@
   background-size: cover;
   background-attachment: fixed;
 }
+/* CSS for elements within the hero area */
 .hero-area .block {
   position: relative;
   z-index: 999999;
@@ -30,7 +31,7 @@
   line-height: 32px;
   color: #f9f9f9;
 }
-
+/* CSS for the template list section */
 .template-list {
   padding: 100px 0;
 }
@@ -40,9 +41,11 @@
   border-radius: 2px;
   position: relative;
 }
+/* CSS for template item on hover */
 .template-item:hover img {
   opacity: 0.7;
 }
+/* CSS for ticker within template item */
 .template-item .ticker {
   position: absolute;
   right: 10px;
@@ -59,6 +62,7 @@
   font-weight: 700;
   background: #4be6e6;
 }
+/* CSS for anchor tag within template item */
 .template-item a {
   box-shadow: 0 15px 45px -9px rgba(0, 0, 0, 0.25);
   display: block;
@@ -67,6 +71,7 @@
   border-radius: 5px;
   transition: 0.3s all;
 }
+/* CSS for heading within template item */
 .template-item h4 {
   margin-top: 20px;
   margin-bottom: 5px;
@@ -80,17 +85,17 @@
   display: inline-block;
   position: relative;
 }
-
+/* CSS for call-to-action section */
 .call-to-action {
   background: #3483de;
   color: #fff;
   padding: 80px 0;
 }
-
+/* CSS for heading within call-to-action section */
 .call-to-action h2 {
   line-height: 45px;
 }
-
+/* CSS for button within call-to-action section */
 .call-to-action .btn-buy-button {
   background: #fff;
   padding: 18px 45px;
@@ -102,7 +107,7 @@
   text-transform: uppercase;
   color: #666;
 }
-
+/* CSS for mouse scroll indicator */
 #mouse-scroll {
   display: block;
 }
@@ -115,7 +120,7 @@
   z-index: 9999;
   bottom: 50px;
 }
-
+/* Styles for mouse scroll indicator */
 #mouse-scroll span {
   display: block;
   width: 10px;
@@ -182,6 +187,7 @@
     opacity: 1;
   }
 }
+/* CSS for footer */
 footer {
   background: #01252d;
   padding: 30px 0;

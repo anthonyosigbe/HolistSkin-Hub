@@ -1,6 +1,6 @@
 from django.urls import path
 from  holistskin_app import views
-
+# URL patterns for mapping each URL to its corresponding view function in the holistskin_app.
 urlpatterns = [
     path('',views.index,name='index'),
     path('login',views.login,name='login'),
