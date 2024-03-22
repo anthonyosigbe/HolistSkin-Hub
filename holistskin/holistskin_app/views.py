@@ -99,14 +99,14 @@ def signin(request):
 def trainingdetails(request):
   
   if not request.user.is_authenticated:
-    messages.warning(request,"please Login to Access the training page")
+    messages.warning(request,"Please Login or Register to Access the Full HolistSkin Hub website")
     return redirect("/auth/login/")
   
   if request.method=="POST":
     fname=request.POST.get('name')
     femail=request.POST.get('email')
     fusn=request.POST.get('usn')
-    fqualification=request.POST.get('hqualification')
+    fqualification=request.POST.get('qualification')
     foffer=request.POST.get('offer')
     fstartdate=request.POST.get('startdate')
     fenddate=request.POST.get('enddate')

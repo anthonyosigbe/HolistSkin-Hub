@@ -74,6 +74,12 @@
             <div class="text-center">
               <button type="submit" class="btn btn-main text-center">Sign Up</button>
             </div>
+
+            {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+              <p class="alert alert-danger my-3">{{error}}</p>
+            {% endfor %}
+            {% endif %}
           </form>
           <p class="mt-20">Already hava an account ?<a href="/auth/login/"> Login</a></p>
           <p><a href="/auth/forget_password/"> Forgot your password?</a></p>
