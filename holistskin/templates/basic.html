@@ -162,7 +162,7 @@
 			<!-- Navbar Links -->
 			<div id="navbar" class="navbar-collapse collapse text-center">
 				<ul class="nav navbar-nav">
-
+					{% if request.user.is_authenticated %}
 					<!-- Home -->
 					<li class="dropdown ">
 						<a href="/index">Home</a>
@@ -245,9 +245,9 @@
 									<ul>
 										<li class="dropdown-header">Utility</li>
 										<li role="separator" class="divider"></li>
-										<li><a href="/auth/login/">Login </a></li>
+										<!-- <li><a href="/auth/login/">Login </a></li>
 										<li><a href="/auth/signin/">Sign Up</a></li>
-										<li><a href="/auth/forget_password/">Forget Password</a></li>
+										<li><a href="/auth/forget_password/">Forget Password</a></li> -->
 										<li><a href="/auth/logout/">Logout</a></li>
 									</ul>
 								</div>
@@ -261,7 +261,12 @@
 							</div><!-- / .row -->
 						</div><!-- / .dropdown-menu -->
 					</li><!-- / Pages -->
+					{% else %}
 
+						<!-- Training -->
+						<li class="dropdown ">
+							<a href="/trainingdetails">Login</a>
+						</li><!-- / training -->
 
 
 					<!-- Blog -->
@@ -272,13 +277,8 @@
 						<ul class="dropdown-menu">
 							<li><a href="/blog">Blog</a></li>
 						</ul>
-					</li><!-- / Blog -->
-
-						<!-- Training -->
-						<li class="dropdown ">
-							<a href="/trainingdetails">Training</a>
-						</li><!-- / training -->
-
+					</li><!-- / Blog -->			
+					{% endif %}
 					
 				</ul><!-- / .nav .navbar-nav -->
 
