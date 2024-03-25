@@ -1,5 +1,7 @@
 from django.urls import path
 from  holistskin_app import views
+
+from django.contrib import admin
 # URL patterns for mapping each URL to its corresponding view function in the holistskin_app.
 urlpatterns = [
     path('',views.index,name='index'),
@@ -28,3 +30,5 @@ urlpatterns = [
     path('trainingdetails',views.trainingdetails,name='trainingdetails'),
     
 ]
+
+admin.site.site_header = 'HolistSkin Hub Backend Administration'
