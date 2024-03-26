@@ -100,7 +100,7 @@ def trainingdetails(request):
   
   if not request.user.is_authenticated:
     messages.warning(request,"Please Login or Register to Access the Full HolistSkin Hub website")
-    return redirect("/trianingdetails")
+    return redirect("/auth/login/")
   
   if request.method=="POST":
     fname=request.POST.get('name')
