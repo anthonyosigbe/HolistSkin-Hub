@@ -36,7 +36,7 @@ npm install
 npm start
 
 #Usage
-Navigate to http://localhost:3000 to view the application. Create an account to unlock personalized skincare recommendations and access our exclusive educational content on holistic skincare practices.
+Navigate to coming up soon loading.... to view the application. Create an account to unlock personalized skincare recommendations and access our exclusive educational content on holistic skincare practices.
 Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated. Check out our Contributing Guide for more information.
 
